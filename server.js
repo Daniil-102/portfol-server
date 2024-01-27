@@ -12,7 +12,9 @@ app.use(urlencoded({ extended: false }));
 app.use(json());
 app.use(cors());
 
-
+app.get('/', (req, res) => {
+  res.send('Hello')
+})
 app.post('/send-email', async (req, res) => {
   const { name, email, phone } = req.body;
 
